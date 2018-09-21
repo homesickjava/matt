@@ -1,0 +1,21 @@
+
+<!--获取用户微信头像和昵称-->
+<view class='container'>
+    <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover" class='userinfo-avatar'></image>
+    <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+
+<!--中秋祝福卡片-->
+  <comp />
+  <view style='height:10rpx'></view>
+  <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}"></image>
+  <view style='height:20rpx'></view>
+  <view class="section__title">亲爱哒{{freind}},</view><view class="section__title">    {{inputValue}}</view>
+  <view style='height:10rpx'></view>
+  <input  bindinput="bindKeyInput2" placeholder="用户昵称："/>
+  <input  bindinput="bindKeyInput" placeholder="中秋祝福："/>
+
+<!--背景音乐-->
+  <view style='height:10rpx'></view>
+  <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src1}}" id="myAudio" controls loop  style='width:100%rpx'></audio>
+  <button type="primary" bindtap="audioPlay" style='width:100%rpx'>{{isplayText}}</button>
+</view>
